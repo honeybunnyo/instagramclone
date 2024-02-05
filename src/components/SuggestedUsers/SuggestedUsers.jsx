@@ -1,7 +1,6 @@
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, Link } from "@chakra-ui/react";
 import { SuggestedHeader } from "./SuggestedHeader";
 import { SuggestedUser } from "./SuggestedUser";
-import { Link } from "react-router-dom";
 
 export const SuggestedUsers = () => {
   return (
@@ -26,14 +25,14 @@ export const SuggestedUsers = () => {
           See All
         </Text>
       </Flex>
-      <SuggestedUser />
-      <SuggestedUser />
-      <SuggestedUser />
+      <SuggestedUser name='Jason A' followers={132} avatar='https://bit.ly/dan-abramov'/>
+      <SuggestedUser name='Ryan Florence' followers={536} avatar='https://bit.ly/ryan-florence'/>
+      <SuggestedUser name='Christian' followers={43} avatar='https://bit.ly/code-beast'/>
 
-      <Box fontSize={12} color={"gray"}>
+      <Box fontSize={12} color={"gray"} mt={5}>
         2024 Built by {""}
-        <Link href="https://github.com/honeybunnyo" target="_blank" color="blue.500" fontSize={14}>
-          honeybunnyo
+        <Link href="https://github.com/honeybunnyo" target="_blank" color="blue.500" fontSize={12}>
+           @honeybunnyo
         </Link>
       </Box>
     </VStack>
