@@ -32,7 +32,7 @@ const ProfileHeader = () => {
           alignItems={"center"}
           w={"full"}
         >
-          <Text fontSize={{ base: "sm", md: "lg" }}> honeybunnyo </Text>
+          <Text fontSize={{ base: "sm", md: "lg" }}> hnneybunnyo </Text>
           <Flex gap={4} alignItems={"center"} justifyContent={"center"}>
             <Button
               bg={"white"}
