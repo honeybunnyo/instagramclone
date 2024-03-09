@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { CommentLogo, NotificationsLogo, UnlikeLogo } from "../../assets/constants";
 
-export const PostFooter = () => {
+export const PostFooter = ({username, isProfilePage}) => {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(1000);
 
@@ -34,8 +34,11 @@ export const PostFooter = () => {
         {likes} likes
       </Text>
 
-      <Text fontSize={"sm"} fontWeight={700}>
-        jennifersmith{" "} 
+      {/* only show footer if it is not on profile page */}
+      {!isProfilePage && (
+        <>
+        <Text fontSize={"sm"} fontWeight={700}>
+        {username}{" "} 
         <Text as='span' fontWeight={400}>
           Feeling good!!
         </Text>
@@ -44,6 +47,9 @@ export const PostFooter = () => {
       <Text fontSize={"sm"} color={"gray"}>
           View all 1,000 comments
       </Text>
+        </>
+      )}
+
 
       <Flex
         alignItems={"center"}

@@ -14,7 +14,7 @@ const Comment = ({createdAt, username, profilePic, text}) => {
           {text}
         </Text>
       </Flex>
-      <Text fontSizee={12} color={"gray"}>
+      <Text fontSize={12} color={"gray"}>
           {createdAt}
         </Text>
     </Flex>
