@@ -8,6 +8,7 @@ import {
 import { useState } from "react";
 import Login from "./login";
 import Signup from "./Signup";
+import GoogleAuth from "./GoogleAuth";
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -34,18 +35,7 @@ const AuthForm = () => {
             </Text>
             <Box flex={2} h={"1px"} bg={"gray.400"} />
           </Flex>
-
-          {/* Log in with Google */}
-          <Flex
-            alignItems={"center"}
-            justifyContent={"center"}
-            cursor={"pointer"}
-          >
-            <Image src="/google.png" w={5} alt="Google Logo" />
-            <Text mx="2" color={"blue.500"}>
-              Log in with Google
-            </Text>
-          </Flex>
+          <GoogleAuth/>
         </VStack>
       </Box>
 

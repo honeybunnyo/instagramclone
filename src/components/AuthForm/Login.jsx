@@ -1,5 +1,5 @@
 import { Input, Button } from "@chakra-ui/react";
-import {useState} from "react";
+import { useState } from "react";
 
 const Login = () => {
     const [inputs, setInputs] = useState({
